@@ -62,8 +62,8 @@ To eliminate memory limits and timeouts during large multi-thousand-row batch ru
 * **Presentation on Hugging Face Spaces:** A Streamlit dashboard runs inside a lightweight web container, serving as an interactive portal for uploading raw files, initiating jobs, monitoring progress bars via asynchronous polling, and downloading final Excel reports[cite: 3, 7].
 * **Storage Ingestion via Azure Blob:** Files are staged directly into Azure Blob Storage with short-lived Shared Access Signature (SAS) tokens, ensuring memory overhead on the web frontend remains minimal regardless of input dataset size[cite: 2, 7].
 * **Azure Batch Auto-Scaling Compute:** Jobs are dispatched to an Azure Batch pool executing containerized tasks packaged via Docker and Azure Container Registry (ACR)[cite: 2, 7].
-* **Autoscale Formula & Scale-to-Zero Logic:** The pool dynamically evaluates queue depth ($PendingTasks) to spin up nodes for processing and immediately scales to zero when queues clear[cite: 2]. By relying on low-priority Azure Spot instances, the system achieved a **65% reduction in cloud infrastructure overhead** while maintaining 99.9% pipeline reliability[cite: 2].
-* **Turnaround Acceleration:** Automating distributed execution across compute pools slashed end-to-end processing times from **3 months of manual review down to under 48 hours**[cite: 2, 3].
+* **Autoscale Formula & Scale-to-Zero Logic:** The pool dynamically evaluates queue depth (`$PendingTasks`) to spin up nodes for processing and immediately scales to zero when queues clear[cite: 2]. By relying on low-priority Azure Spot instances, the system achieved a 65% reduction in cloud infrastructure overhead while maintaining 99.9% pipeline reliability[cite: 2].
+* **Turnaround Acceleration:** Automating distributed execution across compute pools slashed end-to-end processing times from 3 months of manual review down to under 48 hours[cite: 2, 3].
 
 ---
 
